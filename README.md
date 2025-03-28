@@ -10,11 +10,9 @@
 ## مراحل و جزئیات پیاده‌سازی
 مشابه آن‌چه که در فایل تمرین مشخص شده است ورودی‌ها را در صفحه تعریف می‌کنیم:
 ```html
-<div class="input-container">
-        <input type="text" id="fee" placeholder="قیمت واحد"/>
-        <input type="text" id="count" placeholder="تعداد"/>
-        <input type="text" id="discount" placeholder="تخفیف"/>
-    </div>
+<input type="text" id="fee" placeholder="قیمت واحد"/>
+<input type="text" id="count" placeholder="تعداد"/>
+<input type="text" id="discount" placeholder="تخفیف"/>
 ```
 برای تمیز بودن صفحه، خروجی‌ها را در یک جدول نمایش می‌دهیم. 
 <br>
