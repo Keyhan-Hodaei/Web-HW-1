@@ -10,19 +10,26 @@
 * $fee * (count - discount)$
 <br>
 ## مراحل و جزئیات پیاده‌سازی
-مشابه آن‌چه که در فایل تمرین مشخص شده است ورودی‌ها را در صفحه تعریف می‌کنیم:
+مشابه آن‌چه که در فایل تمرین مشخص شده است ورودی‌ها را در صفحه تعریف می‌کنیم.
+برای تمیز بودن صفحه، خروجی‌ها را در یک جدول نمایش می‌دهیم. پیاده‌سازی این جدول به صورت زیر است:
 ```html
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation of three random formulas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script lang="javascript" src="script.js"></script>
+</head>
+<body>
     <h2>Please insert your considered numbers</h2>
     <div class="input-container">
         <input type="text" id="fee" placeholder="قیمت واحد"/>
         <input type="text" id="count" placeholder="تعداد"/>
         <input type="text" id="discount" placeholder="تخفیف"/>
     </div>
-```
-<br>
-برای تمیز بودن صفحه، خروجی‌ها را در یک جدول نمایش می‌دهیم. پیاده‌سازی این جدول به صورت زیر است:
-<br>
-```html
+    <h2>Random formula evaluations</h2>
     <table class="formula-table">
         <thead>
             <tr>
@@ -51,6 +58,8 @@
             </tr>
         </tbody>
     </table>
+</body>
+</html>
 ```
 <br>
 جدول شامل دو ستون که نشان‌دهنده فرمول و نتیجه محاسبات طبق آن فرمول هستند، می‌باشد. در هر سطر جدول یک فرمول با تگ formula تعریف شده است که محاسبات آن با استفاده از فایل javascriptای که نوشتیم انجام می‌شود و نمایش داده می‌شود.
