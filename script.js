@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const countInput = document.getElementById("count");
     const discountInput = document.getElementById("discount");
 
+    function isValid(input) {
+        return /^\d+(\.\d*)?$/.test(input.trim());
+    }
+
     function updateTable() {
         const fee = parseFloat(feeInput.value.trim());
         const count = parseFloat(countInput.value.trim());
@@ -14,30 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const result2 = (fee - discount) * count;
         const result3 = fee * (count - discount);
 
-        rows[0].children[1].textContent = fee;
-        rows[0].children[2].textContent = count;
-        rows[0].children[3].textContent = discount;
-
-        rows[1].children[1].textContent = fee;
-        rows[1].children[2].textContent = count;
-        rows[1].children[3].textContent = discount;
-
-        rows[2].children[1].textContent = fee;
-        rows[2].children[2].textContent = count;
-        rows[2].children[3].textContent = discount;
-
-        if (fee === "" || isNaN(fee)
-            || count === "" || isNaN(count)
-            || discount === "" || isNaN(discount)) {
-                rows.forEach(row => {
-                    row.children[4].textContent = "Invalid Formula";
-                });
-                return;
+        if (!isValid(feeInput.value) || !isValid(countInput.value) || !isValid(discountInput.value)) {
+            document.querySelectorAll("tbody tr").forEach(row => {
+                row.children[1].textContent = "Invalid Formula";
+            });
+            return;
         }
 
-        rows[0].children[4].textContent = result1;
-        rows[1].children[4].textContent = result2;
-        rows[2].children[4].textContent = result3;
+        rows[0].children[1].textContent = result1;
+        rows[1].children[1].textContent = result2;
+        rows[2].children[1].textContent = result3;
 
 
     }
