@@ -45,5 +45,4 @@ document.addEventListener("DOMContentLoaded", function() {
     feeInput.addEventListener("input", updateTable);
     countInput.addEventListener("input", updateTable);
     discountInput.addEventListener("input", updateTable);
-    
 });

@@ -1,0 +1,35 @@
+body {
+    background-color: snow;
+    text-align: center;
+    margin: 100px;
+}
+
+.input-container input {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.formula-table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.formula-table th, .formula-table td {
+    padding: 12px;
+    border: 1px solid;
+    text-align: center;
+    font-size: 18px;
+}
+
+.formula-table th {
+    background-color: cadetblue;
+    color: white;
+}
+
+.formula-table tr:hover {
+    background-color:darkgray;
+}
